@@ -5,3 +5,7 @@
 .mainFxmlClass {
 
 }
+
+#logo {
+    -fx-graphic: url("img/logo.png");
+}
