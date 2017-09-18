@@ -5,6 +5,8 @@
  */
 package tms;
 
+import java.io.File;
+import java.net.URL;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -19,8 +21,9 @@ public class TMS extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("App.fxml"));
-        
+        URL authViewURL = new File("src\\tms\\view\\Auth.fxml").toURI().toURL();
+        //Parent root = FXMLLoader.load(getClass().getResource("App.fxml"));
+        Parent root = FXMLLoader.load(authViewURL);
         Scene scene = new Scene(root);
         
         stage.setScene(scene);
